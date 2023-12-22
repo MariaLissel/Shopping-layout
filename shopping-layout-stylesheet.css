@@ -1,0 +1,27 @@
+/* General ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+html {
+  font-family: "Playfair Display", serif;
+  font-family: "Quicksand", sans-serif;
+  background-image: linear-gradient(#ffffff, #f5f5f5);
+}
+
+/* Grid anlegen mit 3 fr (pro Schuh eine) oder repeat(auto-fill) moinmax() )
+
+/* asics ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.asics-img {
+  width: 23.125rem;
+  height: 13.75rem;
+  background-color: rgb(47, 17, 135);
+  background-image: url(asics.jpg);
+  background-size: cover;
+  background-clip: border-box;
+}
+
+.asics {
+  border: 2px solid red;
+  width: 23rem;
+  height: 50rem;
+  border-radius: 3rem;
+}
