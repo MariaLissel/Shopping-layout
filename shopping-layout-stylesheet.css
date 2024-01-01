@@ -4,6 +4,7 @@ html {
   font-family: "Playfair Display", serif;
   font-family: "Quicksand", sans-serif;
   background-color: #f5f5f5;
+  color: #393939;
 }
 
 /* Grid anlegen mit 3 fr (pro Schuh eine) oder repeat(auto-fill) moinmax() )
@@ -17,37 +18,71 @@ html {
 
 /* asics ////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* padding-container */
+.padding-element {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* Kästchen */
 .asics {
   border: 2px solid red;
-  width: 23rem;
-  height: 50rem;
+  width: 25.8rem;
+  height: 40rem;
   border-radius: 1.4rem;
   background-color: white;
   overflow: hidden; /* Content/Foto ist nur innerhalb dieses Containers sichtbar */
 }
 
-/* Bild */
+.asics-text-1 {
+  margin-bottom: 0;
+}
+
+.asics-text-2 {
+  color: #a2a2a2;
+  line-height: 1.5;
+}
+
+/* Photo by text */
+.photo-by {
+  color: #a2a2a2;
+  font-size: 8px;
+  padding-left: 0.5rem;
+  position: absolute;
+  top: 13rem;
+}
+
+/* image */
 .asics-img {
   height: 15rem;
   background-color: rgb(47, 17, 135); /* Fallback */
   background-image: linear-gradient(
       rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 1) 90%
+      rgba(255, 255, 255, 1) 95%
     ),
     url("asics.jpg");
   background-size: 100%;
+  position: relative;
 }
 
-/* Auswahl-Feld */
+/* choose-part */
 .asics-choose {
+  margin: 0 auto;
+  width: 21rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+
   border: 1px solid red;
+  background-color: #f5f5f5;
+
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "money   money         money     money"
-    "size    size-nr       quantity  quantity-nr"
-    "colour   choose-color  .          .     ";
+    "money     money         money     money"
+    "size      size-nr       quantity  quantity-nr"
+    "colour    choose-color  .          .     "
+    "add-cart  add-cart      add-cart  add-cart";
 }
 
 .grid-items {
@@ -56,28 +91,57 @@ html {
 
 .grid-item-1 {
   grid-area: money;
+  width: 90%;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: black;
+
+  justify-self: center;
+  text-align: center;
 }
 
-grid-item-2 {
+.grid-item-2 {
   grid-area: size;
 }
 
-grid-item-3 {
+.grid-item-3 {
   grid-area: size-nr;
 }
 
-grid-item-4 {
+.grid-item-4 {
   grid-area: quantity;
 }
 
-grid-item-5 {
+.grid-item-5 {
   grid-area: quantity-nr;
 }
 
-grid-item-6 {
+.grid-item-6 {
   grid-area: colour;
 }
 
-grid-item-7 {
+.grid-item-7 {
   grid-area: choose-color;
+}
+
+/* Add to cart part */
+
+.grid-item-8 {
+  grid-area: add-cart;
+  width: 90%;
+  border-radius: 0.3rem;
+  background-color: #485eb9;
+  color: white;
+
+  justify-self: center;
+  text-align: center;
+}
+
+.grid-item-2,
+.grid-item-3,
+.grid-item-4,
+.grid-item-5,
+.grid-item-6,
+.asics-text-2 {
+  font-size: 12px;
 }
