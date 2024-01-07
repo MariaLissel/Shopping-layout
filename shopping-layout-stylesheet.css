@@ -7,6 +7,17 @@ html {
   color: #393939;
 }
 
+main {
+  display: flex;
+}
+
+.asics,
+.adidas,
+.balance {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
 /* Grid anlegen mit 3 fr (pro Schuh eine) oder repeat(auto-fill) moinmax() )
 
 html {
@@ -19,46 +30,64 @@ html {
 /* asics ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* padding-container */
-.padding-element {
+.asics-padding-element {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 /* Kästchen */
 .asics {
-  border: 2px solid red;
-  width: 25.8rem;
-  height: 40rem;
+  width: 26rem;
+  height: 44rem;
   border-radius: 1.4rem;
   background-color: white;
   overflow: hidden; /* Content/Foto ist nur innerhalb dieses Containers sichtbar */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.049);
 }
 
 .asics-text-1 {
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 .asics-text-2 {
   color: #a2a2a2;
   line-height: 1.5;
+  font-size: 15px;
+}
+
+.asics-free-shipping {
+  font-size: 12px;
 }
 
 /* Photo by text */
-.photo-by {
+.asics-photo-by {
   color: #a2a2a2;
-  font-size: 8px;
+  font-size: 10px;
   padding-left: 0.5rem;
   position: absolute;
-  top: 13rem;
+  top: 14rem;
+}
+
+/* free shipping text */
+.asics-free-shipping {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.2rem;
+  width: 6rem;
+  padding: 0.3rem;
+  text-align: center;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
 }
 
 /* image */
 .asics-img {
-  height: 15rem;
+  height: 16rem;
   background-color: rgb(47, 17, 135); /* Fallback */
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 1) 95%
+      rgba(255, 255, 255, 0) 55%,
+      rgba(255, 255, 255, 1) 100%
     ),
     url("asics.jpg");
   background-size: 100%;
@@ -67,17 +96,454 @@ html {
 
 /* choose-part */
 .asics-choose {
-  margin: 0 auto;
-  width: 21rem;
+  margin: 0 auto; /* center vertikal */
+  width: 22rem;
   padding: 1rem;
-  border-radius: 0.7rem;
+  border-radius: 1rem;
+  margin-top: 2rem; /* warum geht nicht margin-bottom? */
 
-  border: 1px solid red;
+  background-color: #f5f5f5;
+}
+
+.items {
+  _border: red solid;
+}
+
+.asics-item-1 {
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;
+}
+
+.asics-item-2 {
+  display: flex;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+.asics-dropdown-1 {
+  width: 3.5rem;
+  height: 1.6rem;
+  padding-left: 0.4rem;
+  background-color: white;
+  margin-left: 1rem;
+  border: 0px;
+}
+
+.asics-Quantity {
+  margin-left: 4rem; /* geht sicher schöner? */
+}
+
+.asics-dropdown-2 {
+  width: 3.5rem;
+  height: 1.6rem;
+  padding-left: 0.4rem;
+  background-color: white;
+  margin-left: 1rem;
+  border: 0px;
+}
+
+.asics-item-3 {
+  display: flex;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+/* color circles */
+
+.asics-color-circle-1 {
+  background-color: #1f55af;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.asics-color-circle-2 {
+  background-color: #da4841;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.asics-color-circle-3 {
+  background-color: #000000;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.asics-circles {
+  padding-left: 0.5rem;
+  width: 5.5rem;
+
+  display: flex; /* Flexbox damit sich die Kreise vertikal aufreihen */
+  justify-content: space-between;
+}
+
+/* Add to cart part */
+
+.asics-item-4 {
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: #485eb9;
+  color: white;
+  margin-top: 0.8rem;
+
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;
+}
+
+.asics-item-2,
+.asics-item-3 {
+  font-size: 15px;
+}
+
+/* adias ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* padding-container */
+.adidas-padding-element {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Kästchen */
+.adidas {
+  width: 26rem;
+  height: 44rem;
+  border-radius: 1.4rem;
+  background-color: white;
+  overflow: hidden; /* Content/Foto ist nur innerhalb dieses Containers sichtbar */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.049);
+}
+
+.adidas-text-1 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.adidas-text-2 {
+  color: #a2a2a2;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* Photo by text */
+.adidas-photo-by {
+  color: #a2a2a2;
+  font-size: 10px;
+  padding-left: 0.5rem;
+  position: absolute;
+  top: 14rem;
+}
+
+/* image */
+.adidas-img {
+  height: 16rem;
+  width: 26rem;
+  background-color: rgb(47, 17, 135); /* Fallback */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0) 55%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("adidas.jpg");
+  background-size: 100%;
+  position: relative;
+}
+
+/* choose-part */
+.adidas-choose {
+  margin: 0 auto; /* center vertikal */
+  width: 22rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 3rem; /* warum geht nicht margin-bottom? */
+
+  background-color: #f5f5f5;
+}
+
+.adidas-item-1 {
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;
+}
+
+.adidas-item-2 {
+  display: flex;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+.adidas-dropdown-1 {
+  width: 3.5rem;
+  height: 1.6rem;
+  padding-left: 0.4rem;
+  background-color: white;
+  margin-left: 1rem;
+  border: 0px;
+}
+
+.adidas-Quantity {
+  margin-left: 4rem; /* geht sicher schöner? */
+}
+
+.adidas-dropdown-2 {
+  width: 3.5rem;
+  height: 1.6rem;
+  padding-left: 0.4rem;
+  background-color: white;
+  margin-left: 1rem;
+  border: 0px;
+}
+
+.adidas-item-3 {
+  display: flex;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+/* color circles */
+
+.adidas-color-circle-1 {
+  background: linear-gradient(to right, #989737 50%, #000000 50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.adidas-color-circle-2 {
+  background: linear-gradient(to right, #578bd8 50%, #000000 50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.adidas-color-circle-3 {
+  background: linear-gradient(to right, #d3658d 50%, #000000 50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.adidas-circles {
+  padding-left: 0.5rem;
+  width: 5.5rem;
+
+  display: flex; /* Flexbox damit sich die Kreise vertikal aufreihen */
+  justify-content: space-between;
+}
+
+/* Add to cart part */
+
+.adidas-item-4 {
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: #485eb9;
+  color: white;
+  margin-top: 0.8rem;
+
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;
+}
+
+.adidas-item-2,
+.adidas-item-3 {
+  font-size: 14px;
+}
+
+/* balance ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* padding-container */
+.balance-padding-element {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Kästchen */
+.balance {
+  width: 26rem;
+  height: 44rem;
+  border-radius: 1.4rem;
+  background-color: white;
+  overflow: hidden; /* Content/Foto ist nur innerhalb dieses Containers sichtbar */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.049);
+}
+
+.balance-text-1 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.balance-text-2 {
+  color: #a2a2a2;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.balance-just-one {
+  font-size: 12px;
+}
+
+/* Photo by text */
+.balance-photo-by {
+  color: #a2a2a2;
+  font-size: 10px;
+  padding-left: 0.5rem;
+  position: absolute;
+  top: 14rem;
+}
+
+/* just one left text */
+.balance-just-one {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.2rem;
+  width: 6rem;
+  padding: 0.3rem;
+  text-align: center;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
+}
+
+/* image */
+.balance-img {
+  height: 16rem;
+  background-color: rgb(47, 17, 135); /* Fallback */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0) 55%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("new-balance.jpg");
+  background-size: 100%;
+  position: relative;
+}
+
+/* choose-part */
+.balance-choose {
+  margin: 0 auto; /* center vertikal */
+  width: 22rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 2.5rem; /* warum geht nicht margin-bottom? */
+
+  background-color: #f5f5f5;
+}
+
+.balance-item-1 {
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;
+}
+
+.balance-item-2 {
+  display: flex;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+.balance-dropdown-1 {
+  width: 3.5rem;
+  height: 1.6rem;
+  padding-left: 0.4rem;
+  background-color: white;
+  margin-left: 1rem;
+  border: 0px;
+}
+
+.balance-Quantity {
+  margin-left: 4rem; /* geht sicher schöner? */
+}
+
+.balance-dropdown-2 {
+  width: 3.5rem;
+  height: 1.6rem;
+  padding-left: 0.4rem;
+  background-color: white;
+  margin-left: 1rem;
+  border: 0px;
+}
+
+.balance-item-3 {
+  display: flex;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+/* color circles */
+
+.balance-color-circle-1 {
+  background: linear-gradient(to right, #ce3329 50%, #ffffff 50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: #e9e9e9 solid 0.5px;
+}
+
+.balance-color-circle-2 {
+  background: linear-gradient(to right, #020609 50%, #ffffff 50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  border: #e9e9e9 solid 0.5px;
+}
+
+.balance-circles {
+  padding-left: 0.5rem;
+  width: 5.5rem;
+
+  display: flex; /* Flexbox damit sich die Kreise vertikal aufreihen */
+  justify-content: flex-start;
+}
+
+/* Add to cart part */
+
+.balance-item-4 {
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: #485eb9;
+  color: white;
+  margin-top: 0.8rem;
+
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;
+}
+
+.balance-item-2,
+.balance-item-3 {
+  font-size: 15px;
+}
+
+/* 1. Versuch mit Grid (verworfen) ////////////////////////////////////////////////////////////////////
+
+.asics-choose {
+  margin: 0 auto; 
+  width: 22rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  top: 1rem;
+
   background-color: #f5f5f5;
 
   display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 3rem 2rem 3rem 3rem;
+  gap: 1rem;
   grid-template-areas:
     "money     money         money     money"
     "size      size-nr       quantity  quantity-nr"
@@ -86,49 +552,119 @@ html {
 }
 
 .grid-items {
-  border: 1px solid red;
+  border: red solid;
 }
 
 .grid-item-1 {
   grid-area: money;
-  width: 90%;
+  width: 95%;
   border-radius: 0.3rem;
   background-color: white;
   color: black;
+  font-size: 20px;
 
-  justify-self: center;
-  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+  justify-self: center; 
 }
 
 .grid-item-2 {
   grid-area: size;
+
+  display: flex;
+  align-items: center; 
 }
 
 .grid-item-3 {
   grid-area: size-nr;
+  background-color: white;
+  padding-left: 0.5rem;
+  border-radius: 0.3rem;
+  width: 60%;
+  height: 85%;
+
+  display: flex;
+  align-items: center; 
+}
+
+.arrow-1::after {
+  content: "\2304";
+  position: relative;
+  bottom: 0.2rem;
+  left: 1.5rem;
 }
 
 .grid-item-4 {
   grid-area: quantity;
+
+  display: flex;
+  align-items: center; 
 }
 
 .grid-item-5 {
   grid-area: quantity-nr;
+
+  background-color: white;
+  padding-left: 0.5rem;
+  border-radius: 0.3rem;
+  width: 60%;
+  height: 85%;
+
+  display: flex;
+  align-items: center; 
+}
+
+.arrow-2::after {
+  content: "\2304";
+  position: relative;
+  bottom: 0.2rem;
+  left: 1.5rem;
 }
 
 .grid-item-6 {
   grid-area: colour;
+
+  display: flex;
+  align-items: center; 
 }
 
 .grid-item-7 {
   grid-area: choose-color;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Add to cart part */
+
+.color-circle-1 {
+  background-color: #1f55af;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.color-circle-2 {
+  background-color: #da4841;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.color-circle-3 {
+  background-color: #000000;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
 
 .grid-item-8 {
   grid-area: add-cart;
-  width: 90%;
+  width: 95%;
   border-radius: 0.3rem;
   background-color: #485eb9;
   color: white;
@@ -143,5 +679,10 @@ html {
 .grid-item-5,
 .grid-item-6,
 .asics-text-2 {
-  font-size: 12px;
+  font-size: 15px;
 }
+
+.test {
+  padding: 0.5rem;
+}
+*/
